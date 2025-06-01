@@ -97,7 +97,7 @@ export const SignInView = () => {
 										Login to your account
 									</p>
 								</div>
-								<div className='grifd gap-3'>
+								<div className='grid gap-3'>
 									<FormField
 										control={form.control}
 										name='email'
@@ -116,7 +116,7 @@ export const SignInView = () => {
 										)}
 									/>
 								</div>
-								<div className='grifd gap-3'>
+								<div className='grid gap-3'>
 									<FormField
 										control={form.control}
 										name='password'
