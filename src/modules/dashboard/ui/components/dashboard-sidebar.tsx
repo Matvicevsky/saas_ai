@@ -19,6 +19,7 @@ import {
 } from '@/components/ui/sidebar'
 import { Separator } from '@/components/ui/separator'
 import { DashboardUserButton } from './dashboard-user-button'
+import { DashboardSidebarItem } from './dashboard-swdebar-item'
 
 const firstSection = [
 	{
@@ -60,24 +61,7 @@ export const DashboardSidebar = () => {
 					<SidebarGroupContent>
 						<SidebarMenu>
 							{firstSection.map((section) => (
-								<SidebarMenuItem key={section.href}>
-									<SidebarMenuButton
-										asChild
-										className={cn(
-											'h-10 hover:bg-linear-to-r/oklch border border-transparent hover:border-[#5D6B68]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50',
-											pathname === section.href &&
-												'bg-linear-to-r/oklch border-[#5D6B68]/10'
-										)}
-										isActive={pathname === section.href}
-									>
-										<Link href={section.href}>
-											<section.icon className='size-5' />
-											<span className='text-sm font-medium tracking-tight'>
-												{section.label}
-											</span>
-										</Link>
-									</SidebarMenuButton>
-								</SidebarMenuItem>
+								<DashboardSidebarItem key={section.href} section={section} />
 							))}
 						</SidebarMenu>
 					</SidebarGroupContent>
@@ -89,24 +73,7 @@ export const DashboardSidebar = () => {
 					<SidebarGroupContent>
 						<SidebarMenu>
 							{secondSection.map((section) => (
-								<SidebarMenuItem key={section.href}>
-									<SidebarMenuButton
-										asChild
-										className={cn(
-											'h-10 hover:bg-linear-to-r/oklch border border-transparent hover:border-[#5D6B68]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50',
-											pathname === section.href &&
-												'bg-linear-to-r/oklch border-[#5D6B68]/10'
-										)}
-										isActive={pathname === section.href}
-									>
-										<Link href={section.href}>
-											<section.icon className='size-5' />
-											<span className='text-sm font-medium tracking-tight'>
-												{section.label}
-											</span>
-										</Link>
-									</SidebarMenuButton>
-								</SidebarMenuItem>
+								<DashboardSidebarItem key={section.href} section={section} />
 							))}
 						</SidebarMenu>
 					</SidebarGroupContent>
