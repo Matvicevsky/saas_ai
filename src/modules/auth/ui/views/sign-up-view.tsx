@@ -107,7 +107,7 @@ export const SignUpView = () => {
 										Create your account
 									</p>
 								</div>
-								<div className='grifd gap-3'>
+								<div className='grid gap-3'>
 									<FormField
 										control={form.control}
 										name='name'
@@ -126,7 +126,7 @@ export const SignUpView = () => {
 										)}
 									/>
 								</div>
-								<div className='grifd gap-3'>
+								<div className='grid gap-3'>
 									<FormField
 										control={form.control}
 										name='email'
@@ -145,7 +145,7 @@ export const SignUpView = () => {
 										)}
 									/>
 								</div>
-								<div className='grifd gap-3'>
+								<div className='grid gap-3'>
 									<FormField
 										control={form.control}
 										name='password'
@@ -164,7 +164,7 @@ export const SignUpView = () => {
 										)}
 									/>
 								</div>
-								<div className='grifd gap-3'>
+								<div className='grid gap-3'>
 									<FormField
 										control={form.control}
 										name='confirmPassword'
