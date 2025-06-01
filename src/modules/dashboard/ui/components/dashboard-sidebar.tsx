@@ -1,25 +1,18 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { cn } from '@/lib/utils'
 import { BotIcon, StarIcon, VideoIcon } from 'lucide-react'
 
 import {
 	Sidebar,
 	SidebarContent,
 	SidebarFooter,
-	SidebarGroup,
-	SidebarGroupContent,
 	SidebarHeader,
-	SidebarMenu,
-	SidebarMenuButton,
-	SidebarMenuItem,
 } from '@/components/ui/sidebar'
 import { Separator } from '@/components/ui/separator'
 import { DashboardUserButton } from './dashboard-user-button'
-import { DashboardSidebarItem } from './dashboard-swdebar-item'
+import { DashboardSibebarGroup } from './dashboard-sidebar-group'
 
 const firstSection = [
 	{
@@ -43,8 +36,6 @@ const secondSection = [
 ]
 
 export const DashboardSidebar = () => {
-	const pathname = usePathname()
-
 	return (
 		<Sidebar>
 			<SidebarHeader className='text-shadow-accent-foreground'>
@@ -57,27 +48,11 @@ export const DashboardSidebar = () => {
 				<Separator className='opacity-10 text-[#5d6b68]' />
 			</div>
 			<SidebarContent>
-				<SidebarGroup>
-					<SidebarGroupContent>
-						<SidebarMenu>
-							{firstSection.map((section) => (
-								<DashboardSidebarItem key={section.href} section={section} />
-							))}
-						</SidebarMenu>
-					</SidebarGroupContent>
-				</SidebarGroup>
+				<DashboardSibebarGroup sections={firstSection} />
 				<div className='px-4 py-2'>
 					<Separator className='opacity-10 text-[#5d6b68]' />
 				</div>
-				<SidebarGroup>
-					<SidebarGroupContent>
-						<SidebarMenu>
-							{secondSection.map((section) => (
-								<DashboardSidebarItem key={section.href} section={section} />
-							))}
-						</SidebarMenu>
-					</SidebarGroupContent>
-				</SidebarGroup>
+				<DashboardSibebarGroup sections={secondSection} />
 			</SidebarContent>
 			<SidebarFooter className='text-white'>
 				<DashboardUserButton />

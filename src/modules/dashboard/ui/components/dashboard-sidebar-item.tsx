@@ -1,18 +1,11 @@
-import { ForwardRefExoticComponent, RefAttributes } from 'react'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar'
-import { LucideProps } from 'lucide-react'
+import { ISidebarSection } from './dashboard-sidebar-group'
 
 interface Props {
-	section: {
-		href: string
-		label: string
-		icon: ForwardRefExoticComponent<
-			Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>
-		>
-	}
+	section: ISidebarSection
 }
 
 export const DashboardSidebarItem = ({ section }: Props) => {
