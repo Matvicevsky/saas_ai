@@ -19,7 +19,7 @@ interface Props {
 	sections: ISidebarSection[]
 }
 
-export const DashboardSibebarGroup = ({ sections }: Props) => {
+export const DashboardSidebarGroup = ({ sections }: Props) => {
 	return (
 		<SidebarGroup>
 			<SidebarGroupContent>

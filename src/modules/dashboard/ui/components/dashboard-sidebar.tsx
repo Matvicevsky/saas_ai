@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/sidebar'
 import { Separator } from '@/components/ui/separator'
 import { DashboardUserButton } from './dashboard-user-button'
-import { DashboardSibebarGroup } from './dashboard-sidebar-group'
+import { DashboardSidebarGroup } from './dashboard-sidebar-group'
 
 const firstSection = [
 	{
@@ -48,11 +48,11 @@ export const DashboardSidebar = () => {
 				<Separator className='opacity-10 text-[#5d6b68]' />
 			</div>
 			<SidebarContent>
-				<DashboardSibebarGroup sections={firstSection} />
+				<DashboardSidebarGroup sections={firstSection} />
 				<div className='px-4 py-2'>
 					<Separator className='opacity-10 text-[#5d6b68]' />
 				</div>
-				<DashboardSibebarGroup sections={secondSection} />
+				<DashboardSidebarGroup sections={secondSection} />
 			</SidebarContent>
 			<SidebarFooter className='text-white'>
 				<DashboardUserButton />
